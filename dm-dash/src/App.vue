@@ -21,6 +21,51 @@ const menu = [
 </script>
 
 <template>
+  <div class="bg-gray-900 py-4 px-2 flex md:hidden items-center justify-between">
+    <a href="#" class="flex items-center text-lg font-medium text-white gap-2">
+      <svg
+        width="35px"
+        height="35px"
+        viewBox="-3.12 -3.12 30.24 30.24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#000000"
+        transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke="#FFFFFF"
+          stroke-width="0.096"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M8 5.07026C9.17669 4.38958 10.5429 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 10.5429 4.38958 9.17669 5.07026 8"
+            stroke="#FFFFFF"
+            stroke-width="0.9120000000000001"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M13.8309 14.9264C8.40242 17.8185 3.18203 18.8529 2.17085 17.2367C1.63758 16.3844 2.38148 14.9651 4 13.3897M17.8486 6.19085C19.8605 5.81929 21.3391 5.98001 21.8291 6.76327C22.6266 8.03781 20.5682 10.5801 17 13.0164"
+            stroke="#FFFFFF"
+            stroke-width="0.9120000000000001"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </g>
+      </svg>
+      <span>Waifu Planet</span>
+    </a>
+    <div class="pr-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1.5em" fill="#606060">
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+        />
+      </svg>
+    </div>
+  </div>
   <div class="flex min-h-screen w-full bg-gray-700 font-sans">
     <aside class="md:flex hidden w-64 flex-col px-4 pt-10 pb-6">
       <a href="#" class="flex items-center text-2xl font-medium text-white">
@@ -90,24 +135,50 @@ const menu = [
       </ul>
     </aside>
     <!-- Main Section -->
-    <main class="flex flex-col flex-1 min-h-screen rounded-l-[48px] bg-gray-800 p-8">
+
+    <main class="flex flex-col md:flex-1 min-h-screen md:rounded-l-[48px] bg-gray-800 p-4 w-[99%]">
       <nav class="flex items-center gap-x-6">
         <!-- Div - 1 -->
-        <div class="flex w-3/5 items-center justify-between">
-          <h1 class="text-[30px] font-bold text-white">Overview</h1>
-          <div class="flex items-center gap-x-2">
+        <div class="md:flex w-full items-center justify-between">
+          <div class="flex md:hidden justify-between">
+            <h1 class="text-[30px] font-bold text-white">Overview</h1>
+            <button
+              class="text-gray-400 flex h-12 items-center gap-2 rounded-full bg-gray-900 px-3 hover:text-white"
+            >
+              <img
+                src="@/assets/Rozaliya.jpeg"
+                alt="pfp"
+                class="w-8 h-8 rounded-full object-cover"
+              />
+              <span>Rozaliya</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="30">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M7 10L12 15L17 10"
+                    stroke="#414141"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-x-2 md:pt-0 pt-4">
             <input
               type="text"
               placeholder="Search..."
               class="rounded-md text-sm bg-gray-900 text-gray-400 px-4 py-2"
             />
             <button class="rounded-md bg-gray-900 text-sm text-gray-400 hover:text-white px-7 py-2">
-              Add Account
+              + Account
             </button>
           </div>
         </div>
         <!-- Div - 2 -->
-        <div class="flex w-3/5 items-center justify-between">
+        <div class="md:flex hidden w-3/5 items-center justify-between">
           <div class="flex items-center gap-x-2.5">
             <button class="bg-gray-900 p-[8px] rounded-full">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="30">
@@ -190,23 +261,11 @@ const menu = [
         </div>
       </nav>
       <div class="flex gap-x-6 py-8">
-        <div class="flex w-3/5 flex-col gap-y-8">
-          <div class="flex items-center justify-between bg-gray-900 rounded-md p-7 text-gray-400">
+        <div class="flex md:w-3/5 w-[99%] text-center flex-col gap-y-8">
+          <div
+            class="flex items-center justify-between bg-gray-900 rounded-md p-7 px-2 text-gray-400"
+          >
             <div class="flex items-center gap-x-4">
-              <div class="bg-gray-800 p-2 rounded-full">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="30">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M11.9511 5.00023C9.22161 5.02636 7.01518 7.23962 7.00008 9.97177C9.37173 9.36069 11.1149 7.50854 11.9511 5.00023ZM12 15C9.92508 15 8.14536 13.7361 7.3887 11.9362C10.6875 11.1335 12.9473 8.55435 13.928 5.38525C15.7323 6.13994 17 7.92192 17 10C17 12.7614 14.7614 15 12 15ZM18.9995 10.0812C18.9998 10.0542 19 10.0271 19 10C19 6.13401 15.866 3 12 3C8.13401 3 5 6.13401 5 10C5 10.0268 5.00015 10.0536 5.00045 10.0804C5.0002 10.0888 5.00005 10.0972 5 10.1056C4.9954 10.9434 4.99703 12.2057 4.99856 13.3972V13.3972L4.99856 13.3973L4.99856 13.3979C4.99929 13.9659 5 14.5178 5 15C5.00001 15.5523 5.44772 16 6 16H7.48312C5.32577 17.0824 4 18.9333 4 21C4 21.5523 4.44772 22 5 22C5.55228 22 6 21.5523 6 21C6 19.2701 7.93073 17 12 17C16.0693 17 18 19.2701 18 21C18 21.5523 18.4477 22 19 22C19.5523 22 20 21.5523 20 21C20 18.9333 18.6742 17.0824 16.5169 16H18C18.5523 16 19 15.5523 19 15C19 14.5175 19.0007 13.9651 19.0014 13.3966L19.0014 13.3951C19.0029 12.2042 19.0046 10.9429 19 10.1056C18.9999 10.0974 18.9998 10.0893 18.9995 10.0812Z"
-                      fill="#E3E3E3"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
               <div>
                 <div>Waifu Count</div>
                 <div class="text-white">90+</div>
@@ -214,15 +273,15 @@ const menu = [
             </div>
             <div>
               <div>Waifu Folders</div>
-              <div class="text-white">7 Folders</div>
+              <div class="text-white">7</div>
             </div>
             <div>
               <div>Anime Waifu</div>
-              <div class="text-white">13 Anime</div>
+              <div class="text-white">13</div>
             </div>
             <div>
               <div>Game Waifu</div>
-              <div class="text-white">12 Game</div>
+              <div class="text-white">12</div>
             </div>
           </div>
           <div class="rounded-md flex flex-col justify-between bg-gray-900 p-7">
@@ -250,7 +309,7 @@ const menu = [
               <barChart />
             </div>
           </div>
-          <div class="rounded-md flex flex-col justify-between bg-gray-900 p-7">
+          <div class="rounded-md flex flex-col justify-between bg-gray-900 py-7 px-6">
             <div class="flex items-center justify-between">
               <h1 class="text-white text-[20px] font-medium">Recent Waifu</h1>
               <button
@@ -265,9 +324,12 @@ const menu = [
                   class="flex gap-2 items-center text-gray-400 hover:text-white duration-200 transition-all cursor-pointer"
                 >
                   <td>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-4">
                       <img src="@/assets/Bronnie.png" alt="bronnie" class="h-8 w-8 rounded-full" />
-                      <p>Haxxor Bunny - Honkai Impact 3</p>
+                      <p>
+                        Haxxor Bunny - <br />
+                        Honkai Impact 3
+                      </p>
                     </div>
                   </td>
                   <td>| 43 minutes ago</td>
@@ -279,13 +341,16 @@ const menu = [
                   class="flex gap-2 items-center text-gray-400 hover:text-white duration-200 transition-all cursor-pointer"
                 >
                   <td>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-4">
                       <img
                         src="@/assets/Silverwolf.jpeg"
                         alt="bronnie"
                         class="h-8 w-8 rounded-full"
                       />
-                      <p>Silver Wolf - Honkai Impact 3</p>
+                      <p>
+                        Silver Wolf - <br />
+                        Honkai Star Rail
+                      </p>
                     </div>
                   </td>
                   <td>| 46 minutes ago</td>
@@ -298,7 +363,7 @@ const menu = [
           </div>
           <div class="rounded-md flex flex-col justify-between bg-gray-900 p-7">
             <div class="flex items-center justify-between">
-              <h1 class="text-white text-[20px] font-medium">Time Consumption Statistics</h1>
+              <h1 class="text-white md:text-[20px] font-medium">Time Consumption Statistics</h1>
               <button
                 class="text-gray-400 flex items-center bg-gray-800 px-4 rounded-md hover:text-white transition-all duration-200 stroke-gray-400 hover:stroke-white"
               >
@@ -321,8 +386,119 @@ const menu = [
               <pieChart />
             </div>
           </div>
+          <div class="md:hidden block bg-gray-900 rounded-md p-4">
+            <lineChart />
+          </div>
+          <div class="md:hidden block">
+            <div class="rounded-md flex flex-col justify-between bg-gray-900 p-7">
+              <div class="flex items-center justify-between">
+                <h1 class="text-white text-[20px] font-medium">Listed Platform</h1>
+                <button
+                  class="text-gray-400 flex items-center bg-gray-800 px-4 py-2 rounded-md hover:text-white transition-all duration-200 stroke-gray-400 hover:stroke-white text-sm"
+                >
+                  + Add New
+                </button>
+              </div>
+              <div class="grid grid-cols-3 place-items-center pt-8 gap-4">
+                <div
+                  class="flex flex-col gap-2 cursor-pointer bg-gray-800 py-2 px-2 rounded-md items-center justify-center text-gray-400 hover:text-white transition-all duration-200 text-sm"
+                >
+                  <img src="@/assets/crunchyroll.png" alt="crunchyroll" class="h-12" />
+                  <span>Crunchyroll</span>
+                </div>
+                <div
+                  class="flex flex-col gap-2 cursor-pointer bg-gray-800 py-2 px-2 rounded-md items-center justify-center text-gray-400 hover:text-white transition-all duration-200 text-sm"
+                >
+                  <img src="@/assets/muse.png" alt="muse" class="h-12" />
+                  <span>MuseAsia</span>
+                </div>
+                <div
+                  class="flex flex-col gap-2 cursor-pointer bg-gray-800 py-2 px-2 rounded-md items-center justify-center text-gray-400 hover:text-white transition-all duration-200 text-sm"
+                >
+                  <img src="@/assets/funimation.png" alt="funimation" class="h-12" />
+                  <span>Funimation</span>
+                </div>
+              </div>
+              <div
+                class="bg-gray-800 w-full py-3 mt-4 text-center text-gray-400 hover:text-white transition-alll duration-200 cursor-pointer"
+              >
+                Start Watching
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="rounded-md flex md:hidden flex-col justify-between bg-gray-900 p-7">
+              <div class="flex items-center justify-between">
+                <h1 class="text-white text-[20px] font-medium">Time Wasted</h1>
+                <button
+                  class="text-gray-400 flex items-center bg-gray-800 px-4 py-2 rounded-md hover:text-white transition-all duration-200 stroke-gray-400 hover:stroke-white text-sm"
+                >
+                  <span>Today</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M7 10L12 15L17 10"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex flex-col gap-2 pt-8">
+                <div class="bg-gray-800 py-2 px-4">
+                  <div
+                    class="flex items-center gap-2 text-white text-sm transition-all duration-200 cursor-pointer"
+                  >
+                    <img
+                      src="@/assets/muse.png"
+                      alt="muse"
+                      class="w-12 bg-gray-900 p-[6px] rounded-md"
+                    />
+                    <p>Muse &#40; Indonesia &#41; - Tensei Shitara Slime Datta Ken : 4</p>
+                  </div>
+                </div>
+                <div class="bg-gray-800 py-2 px-4">
+                  <div
+                    class="flex items-center gap-2 text-white text-sm transition-all duration-200 cursor-pointer"
+                  >
+                    <img
+                      src="@/assets/crunchyroll.png"
+                      alt="crunchyroll"
+                      class="w-9 bg-gray-900 p-[6px] rounded-md"
+                    />
+                    <p>Crunchyroll - Tantei wa Mou Shindeiru : 2</p>
+                  </div>
+                </div>
+                <div class="bg-gray-800 py-2 px-4">
+                  <div
+                    class="flex items-center gap-2 text-sm text-white transition-all duration-200 cursor-pointer"
+                  >
+                    <img
+                      src="@/assets/funimation.png"
+                      alt="funimation"
+                      class="w-10 bg-gray-900 p-[6px] rounded-md"
+                    />
+                    <p>Funimation - Fumetsu no Anata e : 7</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex w-3/5 flex-col gap-y-8">
+        <div class="md:flex hidden w-3/5 flex-col gap-y-8">
           <div class="rounded-md flex flex-col justify-between bg-gray-900 p-7">
             <div class="flex items-center justify-between">
               <h1 class="text-white text-[20px] font-medium">Listed Platform</h1>

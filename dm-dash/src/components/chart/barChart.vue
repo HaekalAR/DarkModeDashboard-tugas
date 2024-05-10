@@ -2,7 +2,7 @@
   <div class="w-fit shadow-sm">
     <main class="bg-gray-900 grid grid-cols-1 px-2 rounded-lg">
       <div class="bg-gray-900 grid grid-cols-1">
-        <canvas id="barChart" height="200" width="520"></canvas>
+        <canvas id="barChart" height="500" width="520"></canvas>
       </div>
     </main>
   </div>

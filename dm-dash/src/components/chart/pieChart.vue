@@ -39,7 +39,7 @@ onMounted(() => {
           }
         }
       },
-      cutout: 100
+      cutout: 40
     }
   })
 })
