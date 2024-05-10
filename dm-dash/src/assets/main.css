@@ -1,0 +1,7 @@
+/* Google Font: Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* Tailwindcss Utiities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
